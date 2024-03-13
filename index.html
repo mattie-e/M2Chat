@@ -1,0 +1,540 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="author" href="#">
+  <title>Weakly-Supervised Emotion Transition Learning for Diverse 3D Co-speech Gesture Generation</title>
+  <meta name="description" content="Weakly-Supervised Emotion Transition Learning for Diverse 3D Co-speech Gesture Generation">
+  <meta name="keywords" content="Co-speech Gesture; Emotion Transition; Weakly-Supervised; Computer Vision">
+  
+
+  <link rel="icon" href="images/icon.webp" type="image/webp">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h2 class="title is-2 publication-title">Weakly-Supervised Emotion Transition Learning for Diverse 3D Co-speech Gesture Generation</h2>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+                <span class="author-block">
+                <a href="https://xingqunqi-lab.github.io/QXQPage/" target="_blank">Xingqun Qi</a>,&nbsp;</span>
+                <span class="author-block">
+                  <a href="">Jiahao Pan</a>,&nbsp;</span>
+                <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=8eTLCkwAAAAJ&hl=zh-CN" target="_blank">Peng Li</a>,&nbsp;</span>
+                <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=hOYpbsAAAAAJ&hl=zh-CN" target="_blank">Ruibin Yuan</a>,&nbsp;</span>
+                <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=Vl1X_-sAAAAJ&hl=zh-CN" target="_blank">Xiaowei Chi</a>,&nbsp;</span>
+				<span class="author-block">
+				<a href="https://github.com/lmfethan" target="_blank">Mengfei Li</a>,&nbsp;</span>
+                <span class="author-block">
+				<a href="https://whluo.github.io/" target="_blank">Wenhan Luo</a>,&nbsp;</span>
+                <span class="author-block">
+				  <a href="http://wei-xue.com/" target="_blank">Wei Xue</a>,&nbsp;</span>
+                <span class="author-block">
+				<a href="https://www.shanghangzhang.com/" target="_blank">Shanghang Zhang</a>,&nbsp;</span>
+                <span class="author-block">
+				<a href="https://emia.hkust.edu.hk/people/detail/qifeng-liu-liuqifeng" target="_blank">Qifeng Liu</a>,&nbsp;</span>
+                <span class="author-block">
+				<a href="https://cse.hkust.edu.hk/admin/people/faculty/profile/yikeguo" target="_blank">Yike Guo</a>,&nbsp;</span>
+                <span class="author-block">
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">
+                     The Hong Kong University of Science and Technology;
+                  </div>
+				  <div class="is-size-5 publication-authors">
+                    <span class="author-block">
+                     Sun Yat-sen University; Peking University
+                  </div>
+
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+<!--                       <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span> -->
+                      <!-- </a> -->
+                    <!-- </span> -->
+                     <span class="link-block">
+                      <a href="pdf/paper.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>PDF</span>
+                    </a>
+                  </span>
+
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="#" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                      <a href="#" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+<!--                       <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span> -->
+                      <span>🔥Dataset</span>
+                    </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2311.17532" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Youtube link -->
+<!--                   <span class="link-block">
+                    <a href="https://www.youtube.com/watch?v=yZp-i7ZgU_M" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>YouTube</span>
+                  </a>
+                </span> -->
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <center><img src="images/teaser.png" border="0" width="100%"></center>
+      <!-- <h2 class="subtitle has-text-centered"> -->
+        <div align="center"><p style="text-align:justify; text-justify:inter-ideograph;width:100%">
+		Figure 1. Diverse exemplary clips sampled by our method from 
+		<b>our newly collected BEAT Emotion Transition Dataset</b>. 
+		The vital frames are visualized to demonstrate that the upper body gestures change with the
+		<font color="#FF6403">emotion transition</font> of human speech, synchronously. From top to bottom: the input speech audio, 
+		the corresponding transcript, and two sampled clips. Best view on screen. 
+      <!-- </h2> -->
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p style="text-align:justify; text-justify:inter-ideograph;">
+		  Generating vivid and emotional 3D co-speech gestures is crucial for virtual avatar animation in 
+		  human-machine interaction applications. While the existing methods enable generating the gestures 
+		  to follow a single emotion label, they overlook that long gesture sequence modeling with emotion 
+		  transition is more practical in real scenes. In addition, the lack of large-scale available datasets 
+		  with <b><font color="#FF6403">emotional transition speech</font></b> and <b><font color="#FF6403">
+		  corresponding 3D human gestures</font></b> also limits the addressing of this 
+		  task. To fulfill this goal, we first incorporate the ChatGPT-4 and an audio inpainting approach to construct 
+		  the high-fidelity emotion transition human speeches. Considering obtaining the realistic 3D pose annotations 
+		  corresponding to the dynamically inpainted emotion transition audio is extremely difficult, we propose a 
+		  novel weakly supervised training strategy to encourage authority gesture transitions. 
+		  Specifically, to enhance the coordination of transition gestures w.r.t. different emotional ones, 
+		  we model the temporal association representation between two different emotional gesture sequences 
+		  as style guidance and infuse it into the transition generation. We further devise an emotion mixture 
+		  mechanism that provides weak supervision based on a learnable mixed emotion label for transition gestures. 
+		  Last, we present a keyframe sampler to supply effective initial posture cues in long sequences, enabling 
+		  us to generate diverse gestures. Extensive experiments demonstrate that our method outperforms the 
+		  state-of-the-art models constructed by adapting single emotion-conditioned counterparts on our newly 
+		  defined emotion transition task and datasets.
+    </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<section class="section" id="Visualization">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Dataset Construction</h2>
+     <center>
+		<img src="images/data_pipeline.png" border="1" width="100%">
+      </center>
+	  <div align="center"><p style="text-align:justify; text-justify:inter-ideograph;width:100%">
+		Figure 2. The pipeline of dataset construction. Head and tail audios as well as the corresponding 
+		transcripts are fed into the pipeline to generate a smooth and high quality transition.
+      <!-- </h2> -->
+    </div>
+      <p style="text-align:justify; text-justify:inter-ideograph;width:100%">The details involve the following steps:</p>
+
+      <b>&#9734; Segmentation and Emotion Labeling</b>:  We first divide the previously aligned single emotion co-speech gesture datasets into head and tail segments by splitting the original audio into 4-second clips. 
+	  Heads are identified as clips with neutral emotions, while tails contain various emotions.
+
+      <br>
+
+      <b>&#9734; Emotion Transition</b>: The head segments consistently exhibit neutral emotions, while the tails display a variety of emotional states. In our approach, we intentionally avoided pairing segments with extreme emotional shifts 
+	  (e.g., happiness-to-anger, happiness-to-sadness). .
+
+      <br>
+
+      <b>&#9734; Transcript Generation with GPT-4</b>: We engage GPT-4 to generate transitional text between the head and tail clips. 
+	  The GPT-4 is instructed to create a smooth transition in both content and emotion, producing about 5-10 words.
+	  For each data sample, GPT-4 generated three candidate transitions, each accompanied by a confidence score, 
+	  returned in JSON format. We finally discard samples with low confidence or excessive length.
+    </div>
+</section>
+
+<section class="section" id="DatasetStatistics">
+     <div class="container is-max-desktop content">
+      <h2 class="title">Dataset Statistics</h2>
+     <center>
+		<img src="images/stastic.png" border="0" width="70%">
+      </center>
+	  <div align="center"><p style="text-align:justify; text-justify:inter-ideograph;width:100%">
+		Figure 3. Details of emotion transition distribution of our newly collected TED-ETrans and BEAT-ETrans datasets. 
+		All the transitions start from the neutral emotional speeches.
+      <!-- </h2> -->
+    </div>
+	
+	     <table border="0.6" style="margin-top: 20px;">
+      <caption><b>TABLE 1. Statistics comparison of existing 3D co-speech gesture datasets with ours. Our <b>BEAT-ETrans</b> and 
+	  <b>TED-ETrans</b> are built upon the existing BEAT and TED-Expressive, 
+	  respectively. To the best of our knowledge, we are the first to present two large datasets with emotion transition human speech. </caption>
+ <!-- The newly built MOSE has the longest video duration and largest objects and annotations. More important, the most notable feature of MOSE is that it contains lots of crowds, occlusions, and disappearance-reappearance objects, which provide more complex scenarios for VOS. -->
+  <tbody>
+    <tr>
+        <th align="right" bgcolor="BBBBBB">Dataset</th>
+        <th align="center" bgcolor="BBBBBB">Joint Annotation</th>
+        <th align="center" bgcolor="BBBBBB">Body</th>
+        <th align="center" bgcolor="BBBBBB">Hand</th>
+        <th align="center" bgcolor="BBBBBB">Audio</th>
+        <th align="center" bgcolor="BBBBBB">Text</th>
+        <th align="center" bgcolor="BBBBBB">Speakers</th>
+        <th align="center" bgcolor="BBBBBB">Single Emotion</th>
+        <th align="center" bgcolor="BBBBBB"><b>Emotion Transition</b></th>
+		<th align="center" bgcolor="BBBBBB">Duration (hour)</th>
+    </tr>
+    <tr>
+      <td align="right"><a href="#" target="_blank">TED</a></td>
+      <td align="center">pseudo label</td>
+      <td align="center">9</td>
+      <td align="center">&#10007;</td>
+      <td align="center">&#10003;</td>
+      <td align="center">&#10003;</td>
+      <td align="center">1,766</td>
+      <td align="center">&#10007;</td>
+      <td align="center">&#10007;</td>
+	  <td align="center">106.1</td>
+    </tr>
+    <tr>
+      <td align="right" bgcolor="ECECEC"><a href="#" target="_blank">SCG</a></a></td>
+      <td align="center" bgcolor="ECECEC">pseudo label</td>
+      <td align="center" bgcolor="ECECEC">14</td>
+      <td align="center" bgcolor="ECECEC">24</td>
+      <td align="center" bgcolor="ECECEC">&#10003;</td>
+      <td align="center" bgcolor="ECECEC">&#10007;</td>
+      <td align="center" bgcolor="ECECEC">6</td>
+      <td align="center" bgcolor="ECECEC">&#10007;</td>
+      <td align="center" bgcolor="ECECEC">&#10007;</td>
+	  <td align="center" bgcolor="ECECEC">33</td>
+    </tr>    
+    <tr>
+      <td align="right"><a href="#" target="_blank">Trinity</td>
+      <td align="center">mo-cap</td>
+      <td align="center">24</td>
+      <td align="center">38</td>
+      <td align="center">&#10003;</td>
+      <td align="center">&#10003;</td>
+      <td align="center">1</td>
+      <td align="center">&#10007;</td>
+      <td align="center">&#10007;</td>
+	  <td align="center">4</td>
+    </tr>
+    <tr>
+      <td align="right" bgcolor="ECECEC"><a href="#">ZeroEGGS</a></td>
+      <td align="center" bgcolor="ECECEC">mo-cap</td>
+      <td align="center" bgcolor="ECECEC">27</td>
+      <td align="center" bgcolor="ECECEC">48</td>
+      <td align="center" bgcolor="ECECEC">&#10003;</td>
+      <td align="center" bgcolor="ECECEC">&#10003;</td>
+      <td align="center" bgcolor="ECECEC">1</td>
+      <td align="center" bgcolor="ECECEC">&#10007;</td>
+      <td align="center" bgcolor="ECECEC">&#10007;</td>
+	  <td align="center" bgcolor="ECECEC">2</td>
+    </tr>
+    <tr>
+      <td align="right"><a href="#" target="_blank">BEAT</a></td>
+      <td align="center">mo-cap</td>
+      <td align="center">27</td>
+      <td align="center">48</td>
+      <td align="center">&#10003;</td>
+      <td align="center">&#10003;</td>
+      <td align="center">30</td>
+      <td align="center">&#10003;</td>
+      <td align="center">&#10007;</td>
+	  <td align="center">35</td>
+    </tr>
+	<tr>
+      <td align="right" bgcolor="ECECEC"><a href="#" target="_blank">TED-Expressive</a></td>
+      <td align="center" bgcolor="ECECEC">pseudo labe</td>
+      <td align="center" bgcolor="ECECEC">13</td>
+      <td align="center" bgcolor="ECECEC">30</td>
+      <td align="center" bgcolor="ECECEC">&#10003;</td>
+      <td align="center" bgcolor="ECECEC">&#10003;</td>
+      <td align="center" bgcolor="ECECEC">1,764</td>
+      <td align="center" bgcolor="ECECEC">&#10007;</td>
+      <td align="center" bgcolor="ECECEC">&#10007;</td>
+	  <td align="center" bgcolor="ECECEC">100.8</td>
+    </tr>
+    <tr>
+      <td align="right"><b>BEAT-ETrans (ours)</b></td>
+      <td align="center"><b>mo-cap</b></td>
+      <td align="center"><b>27</b></td>
+      <td align="center"><b>48</b></td>
+      <td align="center"><b>&#10003;</b></td>
+      <td align="center"><b>&#10003;</b></td>
+      <td align="center"><b>30</b></td>
+      <td align="center"><b>8</b></td>
+      <td align="center"><b>&#10003;</b></td>
+	  <td align="center"><b>161.3</b></td>
+    </tr>
+    <tr>
+      <td align="right" bgcolor="E5E5E5"><b>TED-ETrans (ours)</b></td>
+      <td align="center" bgcolor="E5E5E5"><b>pseudo labe</b></td>
+      <td align="center" bgcolor="E5E5E5"><b>13</b></td>
+      <td align="center" bgcolor="E5E5E5"><b>30</b></td>
+      <td align="center" bgcolor="E5E5E5"><b>&#10003;</b></td>
+      <td align="center" bgcolor="E5E5E5"><b>&#10003;</b></td>
+      <td align="center" bgcolor="E5E5E5"><b>1,764</b></td>
+      <td align="center" bgcolor="E5E5E5"><b>6</b></td>
+      <td align="center" bgcolor="E5E5E5"><b>&#10003;</b></td>
+	  <td align="center" bgcolor="E5E5E5"><b>59.8</b></td>
+    </tr>
+  </tbody>
+  <colgroup>
+    <col>
+    <col>
+    <col>
+    <col>
+    <col>
+    <col>
+    <col>
+    <col>
+    <col>
+  </colgroup>
+</table>
+ </center><br>
+  </div>
+	 </div>
+</section>
+
+<section class="section" id="Methods">
+    <div class="container is-max-desktop content">
+      <h2 class="title">Our Proposed Method</h2>
+     <center><img src="images/pipeline.png" border="0" width="100%"></center><br>
+        <div align="center"><p style="text-align:justify; text-justify:inter-ideograph;width:100%">
+		The <b>middle part <font color="#deebf7">blue ▇</font></b> displays the overall pipeline for 3D co-speech 
+		gesture generation from emotion transition human speech. The <b>left part <font color="#70ad47">green ▇</font></b> 
+		depicts our proposed Motion Transition Infusion Mechanism that enhances the coordination of transition gestures
+		\wrt head/tail ones. The <b>right part <font color="#f8cbad">orange ▇</font></b> shows the designed Emotion Mixture 
+		Strategy to provide weak supervision of the generated transition gestures, thereby achieving authority producing.</p></div><br> 
+    </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+  <h2 class="title">Video Demo</h2>
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="images/demo_video.mp4"
+        type="video/mp4">
+      </video>
+      <div class="subtitle has-text-centered" style= "font-size:0.775em; text-align:center;"> <p><b></b></p>
+	</div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <!-- Paper video. -->
+      <h2 class="title is-3">More Visual Results</h2>
+     <div id="results-carousel" class="carousel results-carousel">
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+		    <img src="images/v1.png" alt="Methods comparison"/>
+		  <div class="subtitle has-text-centered" style="margin-top:10px; text-align:center; margin-bottom:30px;">
+          <p  style="vertical-align:middle; font-size:0.8em;">
+		  Visualization of our generated 3D co-speech gestures against various state-of-the-art methods. 
+		  The samples of the left part are from our newly collected TED-ETrans dataset,
+		  and the samples of the right part are from our BEAT-ETrans dataset. Best view on screen.</p>
+		 </div>
+        </div>
+      </div>
+	  
+	  <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+		   <img src="images/v2.png" alt="Methods comparison"/>
+		  <div class="subtitle has-text-centered" style="margin-top:10px; text-align:center; margin-bottom:30px;">
+          <p  style="vertical-align:middle; font-size:0.8em;">
+		  Visual comparisons of ablation study on our newly collected <b>BEAT-ETrans dataset</b>. 
+		  We show the key frames of the generated motions given the emotion transition of human speech.
+		  Best view on screen.
+		  </p>
+		 </div>
+        </div>
+      </div>
+	  
+	   <div class="columns is-centered has-text-centered" >
+        <div class="column is-four-fifths">
+		   <img src="images/v3.png" alt="Methods comparison"/>
+		  <div class="subtitle has-text-centered" style="margin-top:10px; text-align:center; margin-bottom:30px;">
+          <p  style="vertical-align:middle; font-size:0.8em;">
+		  Visual comparisons of ablation study on our newly collected <b>TED-ETrans dataset</b>. 
+		  We show the key frames of the generated motions given the emotion 
+		  transition of human speech. Best view on screen.
+		  </p>
+		 </div>
+        </div>
+      </div>
+	  </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="Downloads">
+  <div class="container is-max-desktop content">
+  <h2 class="title">Downloads</h2>
+    <center>
+      <ul>
+        <li class="grid">
+          <div class="griditem">
+        <a href="#" target="_blank" class="imageLink"><img src="images/paper_show.png"></a><br><a href="pdf/paper.pdf" class="imageLink"  target="_blank">Technical Report</a>
+        </div>
+          </li>
+          <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+
+        <li li class="mygrid">
+          <div class="mygriditem">
+        <a href="#" target="_blank" class="imageLink"><img src="images/github.png"></a><br><a href="#" target="_blank">Code (🔥Comming Soon!)</a>
+        </div>
+        </li>
+
+        <li class="mygrid">
+          <div class="mygriditem">
+        <a href="#" target="_blank" class="imageLink"><img src="images/dataset.png"></a><br><a href="#" target="_blank">🔥Dataset (Comming Soon!)</a>
+        </div>
+          </li>
+
+        </ul><br><br>
+      
+    </center>
+
+    <!--<font style="line-height:2;">
+    ● We use Region Jaccard <b><i>J</i></b>, Boundary F measure <b><i>F</i></b>, and their mean <b><i>J&F</i></b> as the evaluation metrics.<br>
+
+    ● For the validation sets, the expressions are released to indicate the objects that are considered in evaluation. <br>
+
+    ● The validation set online evaluation server is <a href="https://codalab.lisn.upsaclay.fr/competitions/15094" target="_blank">[here]</a> for daily evaluation. <br>
+
+    ● The test set online evaluation server will be open during the competition period only. <br>
+
+    <!-- ● <font color="#FF6403">For urgent cases before online server is ready, you could send your predictions to us and we will return the <b><i>J&F</i></b> results to you.</font> -->
+    <!--</font>
+    </div>-->
+</section>
+
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      Please consider to cite this paper if it helps your research.
+      <pre><code>@misc{qi2023weaklysupervised,
+      title={Weakly-Supervised Emotion Transition Learning for Diverse 3D Co-speech Gesture Generation}, 
+      author={Xingqun Qi and Jiahao Pan and Peng Li and Ruibin Yuan and Xiaowei Chi and Mengfei Li and Wenhan Luo and Wei Xue and Shanghang Zhang and Qifeng Liu and Yike Guo},
+      year={2023},
+      eprint={2311.17532},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+
+<section class="section" id="License">
+<footer class="footer">
+  <div class="container">
+  <div class="columns is-centered">
+    <div class="column is-8">
+      <div class="content">
+        <p>
+          This website is licensed under a <a rel="license"
+          href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+        Commons Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+</footer>
+</section>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
